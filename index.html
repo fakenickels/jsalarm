@@ -18,7 +18,7 @@
 			</form>
 
 			<audio id='alarm'>
-				<source src="assets/audio/kalimba.mp3"></source>
+				<source src="assets/audio/alarm.mp3"></source>
 			</audio>
 		</header>
 	</div>
@@ -36,6 +36,7 @@
 
 		untilDate.setHours(time[0]);
 		untilDate.setMinutes(time[1]);
+		untilDate.setSeconds(0);
 
 		Countdown.until( untilDate, function(obj){
 			$('#countdown')
