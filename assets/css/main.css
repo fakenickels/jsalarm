@@ -23,5 +23,6 @@ body {
 .holder header {
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;	
+	text-align: center;
+	z-index: 9000
 }

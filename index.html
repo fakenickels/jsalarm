@@ -3,7 +3,7 @@
 <head>
 	<meta charset='utf-8'>
 	<title>jsalarm</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
 </head>
 <body>
@@ -11,10 +11,17 @@
 <div id='container' class='container'>
 	<div class='holder'>
 		<header>
-			<h1 id='countdown'>Porque você era Bandida</h1>
-			<form class='form-control form-inline' role='form' id='date-selection'>
-				Soar às <input class='form-control' type='time'/>
-				<button type='submit' class='btn btn-default'>ok</button>
+			<h1 id='countdown'>JSAlarm <small>Porque você era bandida</small></h1>
+			<form role='form' id='date-selection'>
+				<div class='form-group'>
+					<!-- not using label 'cause it's ugly -->
+					<p class='lead'>
+						Soar às
+						<input name='time' type='time'/>
+					</p>
+				</div>
+				
+				<button type='submit' class='btn btn-large btn-primary'>ok</button>
 			</form>
 
 			<audio id='alarm'>
@@ -25,7 +32,8 @@
 </div>
 
 <script type="text/javascript" src='assets/js/jquery-2.0.2.min.js'></script>
-<script type="text/javascript" src='assets/js/bootstrap.min.js'></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src='assets/js/main.js'></script>
 <script type="text/javascript">
 	$("#date-selection").submit(function( e ){
